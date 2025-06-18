@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Mail, MessageCircle, Phone } from "lucide-react"
+import { Mail, MessageCircle } from "lucide-react"
 
 export default function ContactSection() {
   return (
@@ -13,11 +13,11 @@ export default function ContactSection() {
               className="text-center"
             >
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6 text-gradient-luxury luxury-heading">
-                Let's Work Together
+                Let&apos;s Work Together
               </h2>
               <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto">
-                I'm always open to discussing new opportunities and interesting projects. Feel free to reach out if
-                you'd like to connect!
+                I&apos;m always open to discussing new opportunities and interesting projects. Feel free to reach out if
+                you&apos;d like to connect!
               </p>
 
               <div className="flex flex-col md:flex-row gap-4 sm:gap-6 max-w-4xl mx-auto">

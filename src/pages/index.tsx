@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
-import { Github, ExternalLink, Mail, Phone } from "lucide-react"
 import Head from "next/head"
 import Navigation from "@components/Navigation"
 import HeroSection from "@components/HeroSection"
@@ -21,11 +19,6 @@ export default function Portfolio() {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" })
   }
 
-  const skills = {
-    "Programming Languages": ["JavaScript", "PHP", "Java", "Python", "TypeScript"],
-    "Frameworks/Libraries": ["React", "Laravel", "Express.js", "Node.js", "React Native"],
-    Others: ["Bug Tracking", "Deployment", "UI/UX Implementation"],
-  }
 
   return (
     <>

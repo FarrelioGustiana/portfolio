@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Mail, Phone, MapPin, MessageCircle, Github } from "lucide-react"
+import { Mail, MapPin, Github } from "lucide-react"
 
 export default function AboutSection() {
   return (
@@ -17,12 +17,12 @@ export default function AboutSection() {
               </h2>
               <div className="max-w-4xl mx-auto">
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                  I'm a passionate final-year Informatics student at President University with a strong foundation in
+                  I&apos;m a passionate final-year Informatics student at President University with a strong foundation in
                   both web and mobile development. My journey in technology has been driven by curiosity and a desire to
                   create meaningful digital experiences.
                 </p>
                 <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                  Throughout my academic journey, I've worked on various team projects using modern frameworks like
+                  Throughout my academic journey, I&apos;ve worked on various team projects using modern frameworks like
                   React, Laravel, and React Native. I believe in continuous learning and always strive to stay updated
                   with the latest technologies and best practices.
                 </p>
