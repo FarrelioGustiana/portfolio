@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #f8f8f8;
+  --radius: 0.5rem;
+  /* Luxury color palette */
+  --color-primary-50: #fefdf8;
+  --color-primary-100: #fef7e0;
+  --color-primary-200: #fdecc4;
+  --color-primary-300: #fbdc9c;
+  --color-primary-400: #f8c572;
+  --color-primary-500: #d4af37; /* Champagne Gold */
+  --color-primary-600: #b8941f;
+  --color-primary-700: #9a7a1a;
+  --color-primary-800: #7d6216;
+  --color-primary-900: #654f14;
+
+  /* Secondary luxury colors */
+  --color-secondary-400: #c0c0c0; /* Silver */
+  --color-secondary-500: #a8a8a8;
+  --color-secondary-600: #909090;
+
+  /* Accent colors */
+  --color-accent-warm: #f5f5dc; /* Warm cream */
+  --color-accent-cool: #e8e8e8; /* Cool platinum */
 }
 
 @theme inline {
@@ -14,8 +35,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #f8f8f8;
   }
 }
 
@@ -23,4 +44,249 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Luxury gradient keyframes */
+@keyframes luxury-shimmer {
+  0%,
+  100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+@keyframes gold-glow {
+  0%,
+  100% {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.6), 0 0 30px rgba(212, 175, 55, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 30px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.6);
+  }
+}
+
+/* Utility classes for luxury animations */
+.luxury-shimmer {
+  animation: luxury-shimmer 8s ease-in-out infinite;
+}
+
+.gold-glow {
+  animation: gold-glow 3s ease-in-out infinite;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-black text-gray-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient-luxury {
+    @apply bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-silver {
+    @apply bg-gradient-to-r from-gray-300 via-gray-100 to-gray-400 bg-clip-text text-transparent;
+  }
+
+  .bg-luxury-card {
+    @apply bg-gradient-to-br from-gray-900/50 to-black/80;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .border-luxury {
+    @apply border-yellow-500/30;
+  }
+
+  .hover-luxury {
+    @apply hover:border-yellow-400/60 hover:shadow-lg hover:shadow-yellow-500/20;
+  }
+}
+
+/* Custom scrollbar - Luxury theme */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-yellow-500 to-yellow-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-yellow-400 to-yellow-500;
+}
+
+/* Luxury button styles */
+.btn-luxury-primary {
+  @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-black font-medium px-6 py-3 rounded-full;
+  @apply hover:from-yellow-400 hover:to-yellow-500 transition-all duration-300 transform hover:scale-105;
+  @apply shadow-lg shadow-yellow-500/25 hover:shadow-yellow-400/40;
+  @apply text-sm;
+}
+
+@media (min-width: 640px) {
+  .btn-luxury-primary {
+    @apply px-8 text-base;
+  }
+}
+
+.btn-luxury-secondary {
+  @apply border border-gray-400 text-gray-300 px-6 py-3 rounded-full;
+  @apply hover:bg-gray-800 hover:text-white hover:border-gray-300 transition-all duration-300 transform hover:scale-105;
+  @apply text-sm;
+}
+
+@media (min-width: 640px) {
+  .btn-luxury-secondary {
+    @apply px-8 text-base;
+  }
+}
+
+/* Luxury card hover effects */
+.luxury-card {
+  @apply bg-gradient-to-br from-gray-900/40 to-black/60 backdrop-blur-sm;
+  @apply border border-gray-800 rounded-2xl transition-all duration-500;
+  @apply hover:border-yellow-500/40 hover:shadow-2xl hover:shadow-yellow-500/10;
+}
+
+/* Elegant text shadows for headings */
+.luxury-heading {
+  text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+}
+
+/* Subtle luxury background pattern */
+.luxury-bg {
+  background: radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(192, 192, 192, 0.03) 0%, transparent 50%), #000000;
+}
+
+/* Navigation blur effect */
+.nav-luxury {
+  @apply bg-black/80 backdrop-blur-md border-b border-gray-800/50;
+}
+
+/* Luxury section dividers */
+.section-divider {
+  @apply bg-gradient-to-r from-transparent via-yellow-500/30 to-transparent h-px;
+}
+
+.logo-g-glow {
+  animation: gold-glow 3s ease-in-out infinite;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+  background: transparent !important;
+}
+
+/* Enhanced profile photo layers */
+.profile-photo-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-photo-container::before {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  background: conic-gradient(from 0deg, #d4af37, #f8c572, #d4af37, #b8941f, #d4af37);
+  border-radius: 50%;
+  z-index: -1;
+  animation: rotate-border 8s linear infinite;
+}
+
+@media (min-width: 640px) {
+  .profile-photo-container::before {
+    inset: -8px;
+  }
+}
+
+.profile-photo-container::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, rgba(212, 175, 55, 0.1) 50%, transparent 100%);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media (min-width: 640px) {
+  .profile-photo-container::after {
+    inset: -4px;
+  }
+}
+
+@keyframes rotate-border {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.profile-photo {
+  position: relative;
+  border: 3px solid rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.4), 0 0 40px rgba(212, 175, 55, 0.2), inset 0 0 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+@media (min-width: 640px) {
+  .profile-photo {
+    border: 4px solid rgba(212, 175, 55, 0.6);
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2), inset 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.3), inset 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(212, 175, 55, 0.05) 100%
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+.profile-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .luxury-heading {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+  }
 }
