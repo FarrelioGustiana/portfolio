@@ -14,7 +14,7 @@ const projects = [
       github: "https://github.com/adhitaazizi/TechTalent-Academy.git",
     },
     highlights: [
-      "Built mobile interface using React Native based on team&apos;s UI design",
+      "Built mobile interface using React Native based on team's UI design",
       "Set up and managed Firebase services",
       "Identified, reported, and tracked bugs throughout development",
       "Delegated and resolved bug fixes within the team",
@@ -32,7 +32,7 @@ const projects = [
       github: "https://github.com/haysnairpa/cnc-hub.git",
     },
     highlights: [
-      "Built parts of the frontend interface based on team&apos;s design",
+      "Built parts of the frontend interface based on team's design",
       "Managed Firebase backend services",
       "Identified bugs and reported them clearly to development team",
       "Delegated tasks for bug fixing to appropriate team members",
